@@ -1,5 +1,7 @@
 package com.bhh.imooc.alllearning996.domain.common;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import java.io.Serializable;

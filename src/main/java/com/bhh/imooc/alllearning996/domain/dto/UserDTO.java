@@ -1,11 +1,13 @@
 package com.bhh.imooc.alllearning996.domain.dto;
 
 import com.bhh.imooc.alllearning996.util.InsertValidationGroup;
+import com.bhh.imooc.alllearning996.util.UpdateValidationGroup;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * @author bhh
@@ -22,13 +24,13 @@ public class UserDTO implements Serializable {
      * 用户名称
      */
     @NotBlank(message = "用户名不能为空",
-            groups = {InsertValidationGroup.class})
+            groups = {UpdateValidationGroup.class})
     private String username;
 
     /**
      * 用户密码
      */
-    @NotBlank(message = "用户名不能为空",
+    @NotBlank(message = "用户密码不能为空",
             groups = {InsertValidationGroup.class})
 //    密码长度分开验证
     @Length(min = 6, message = "密码长度不能小于6")
@@ -65,4 +67,8 @@ public class UserDTO implements Serializable {
      */
     private Long version;
 
+    /**
+     * 创建时间
+     */
+    private LocalDateTime created;
 }

@@ -9,6 +9,7 @@ import com.bhh.imooc.alllearning996.domain.dto.UserQueryDTO;
 import com.bhh.imooc.alllearning996.domain.entity.UserDO;
 import com.bhh.imooc.alllearning996.mapper.UserMapper;
 import com.bhh.imooc.alllearning996.service.UserService;
+import com.bhh.imooc.alllearning996.util.InsertValidationGroup;
 import com.bhh.imooc.alllearning996.util.ValidatorUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -37,7 +38,7 @@ public class UserServiceImpl implements UserService {
     public int save(UserDTO userDTO) {
 
         //手动检验
-        ValidatorUtils.validation(userDTO);
+        //ValidatorUtils.validation(userDTO, InsertValidationGroup.class);
 
         UserDO userDO = new UserDO();
         // TODO: 浅拷贝,属性名称相同才可以进行拷贝

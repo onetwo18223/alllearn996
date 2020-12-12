@@ -14,7 +14,9 @@ import lombok.Getter;
 public enum CodeEnum {
 
     SUCCESS("0000", "操作成功！"),
-    FAIL("1000", "操作失败！");
+    FAIL("1000", "操作失败！"),
+    RATE_LIMIT_Failure("1001", "限流异常！")
+    ;
 
     /**
      * 异常相关编码 

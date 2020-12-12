@@ -1,6 +1,8 @@
 package com.bhh.imooc.alllearning996.domain.common;
 
 import com.bhh.imooc.alllearning996.exception.CodeEnum;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -12,6 +14,9 @@ import java.io.Serializable;
  * @modified By
  */
 @Data
+@ApiModel(
+        value = "统一返回结果实体"
+)
 public class ResponseResult<T> implements Serializable {
 
     private static final long serialVersionUID = -96386682161274675L;
@@ -19,6 +24,11 @@ public class ResponseResult<T> implements Serializable {
     /**
      * 是否成功
      */
+    @ApiModelProperty(
+            name = "judge",
+            value = "判断是否正确操作了请求",
+            required = true
+    )
     private Boolean judge;
 
     /**
