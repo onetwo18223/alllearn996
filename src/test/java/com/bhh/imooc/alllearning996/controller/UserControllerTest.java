@@ -24,9 +24,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @Slf4j
 class UserControllerTest {
 
-    public static final Long ID = 1336848625138106369L;
     @Autowired
     private UserController userController;
+
+    public static final Long ID = 1336848625138106369L;
 
     @Test
     void save() {

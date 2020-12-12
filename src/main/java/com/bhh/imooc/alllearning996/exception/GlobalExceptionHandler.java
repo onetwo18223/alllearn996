@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * 捕捉运行时异常，进行统一回复处理
+     * 拦截捕捉运行时异常，进行统一回复处理
      * @param e
      * @return
      */
