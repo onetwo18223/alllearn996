@@ -3,7 +3,6 @@ package com.bhh.imooc.alllearning996.interceptor;
 import com.bhh.imooc.alllearning996.exception.BusinessException;
 import com.bhh.imooc.alllearning996.exception.CodeEnum;
 import com.google.common.util.concurrent.RateLimiter;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
