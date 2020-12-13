@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
     public int save(UserDTO userDTO) {
 
         //手动检验
-        //ValidatorUtils.validation(userDTO, InsertValidationGroup.class);
+        ValidatorUtils.validation(userDTO, InsertValidationGroup.class);
 
         UserDO userDO = new UserDO();
         // TODO: 浅拷贝,属性名称相同才可以进行拷贝
